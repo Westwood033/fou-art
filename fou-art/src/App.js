@@ -148,7 +148,7 @@ function App() {
                 className="button-prev"
                 onClick={goToPrev}
               >
-                Revenir à la question précédente
+                Revenir au critère précédent
               </button>
             </div>
           )}
