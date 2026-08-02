@@ -1,0 +1,217 @@
+.question-container {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 120px;
+    max-width: 40vw;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+}
+
+
+/* CARD */
+
+.question-card {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* QUESTION */
+
+.question {
+
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+    color: #333;
+}
+
+
+/* BOUTONS */
+
+.button-list {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.button-list button {
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 10%;
+
+    background-color: #3498db;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.button-list button:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.button-list button:active {
+
+    transform: scale(0.95);
+
+}
+
+
+/* LEGENDE */
+
+.legende {
+
+    margin-top: 20px;
+
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+
+/* TABLETTE */
+
+@media(max-width: 768px) {
+
+    .question-container {
+
+        margin: 20px auto;
+
+        padding: 15px;
+
+    }
+
+
+    .question-card {
+
+        padding: 20px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .button-list {
+
+        gap: 10px;
+
+    }
+
+
+    .button-list button {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width: 480px) {
+
+    .question-container {
+
+        margin: 10px auto;
+
+        padding: 10px;
+
+    }
+
+
+    .logo {
+
+        width: 90px;
+
+    }
+
+
+    .question-card {
+
+        padding: 15px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .button-list {
+
+        gap: 8px;
+
+    }
+
+
+    .button-list button {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 0.9rem;
+
+    }
+
+}
