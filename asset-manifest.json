@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Westwood033/fou-art/static/css/main.6ed940ed.css",
-    "main.js": "/Westwood033/fou-art/static/js/main.a68682b8.js",
-    "static/js/453.ea1f650a.chunk.js": "/Westwood033/fou-art/static/js/453.ea1f650a.chunk.js",
-    "static/media/foufou.jpg": "/Westwood033/fou-art/static/media/foufou.8594b3aff349be9abd01.jpg",
-    "index.html": "/Westwood033/fou-art/index.html",
-    "main.6ed940ed.css.map": "/Westwood033/fou-art/static/css/main.6ed940ed.css.map",
-    "main.a68682b8.js.map": "/Westwood033/fou-art/static/js/main.a68682b8.js.map",
-    "453.ea1f650a.chunk.js.map": "/Westwood033/fou-art/static/js/453.ea1f650a.chunk.js.map"
+    "main.css": "/fou-art/static/css/main.6ed940ed.css",
+    "main.js": "/fou-art/static/js/main.fa9d403e.js",
+    "static/js/453.ea1f650a.chunk.js": "/fou-art/static/js/453.ea1f650a.chunk.js",
+    "static/media/foufou.jpg": "/fou-art/static/media/foufou.8594b3aff349be9abd01.jpg",
+    "index.html": "/fou-art/index.html",
+    "main.6ed940ed.css.map": "/fou-art/static/css/main.6ed940ed.css.map",
+    "main.fa9d403e.js.map": "/fou-art/static/js/main.fa9d403e.js.map",
+    "453.ea1f650a.chunk.js.map": "/fou-art/static/js/453.ea1f650a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ed940ed.css",
-    "static/js/main.a68682b8.js"
+    "static/js/main.fa9d403e.js"
   ]
 }
