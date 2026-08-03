@@ -2,6 +2,7 @@
   margin-left: 20px;
   margin-top: 20px;
   display: inline;
+  color: #577d0d;
 }
 
 .container-prev {
@@ -12,7 +13,7 @@
 .button-prev {
   padding: 10px;
   border: none;
-  background-color: #1976d2;
+  background-color: #577d0d;
   color: white;
   font-size: 1rem;
   font-weight: bold;

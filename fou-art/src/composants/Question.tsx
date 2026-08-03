@@ -2,7 +2,7 @@ import "./../style/Question.css";
 import logo from "./../images/foufou.jpg"
 
 function Question({ question, onAnswer }) {
-  const notes = ["NA", 1, 2, 3, 4, 5];
+  const notes = ["NA/0", 1, 2, 3, 4, 5];
 
   return (
     <div className="question-container">

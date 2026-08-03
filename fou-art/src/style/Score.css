@@ -31,7 +31,7 @@
 
     border-radius: 50%;
 
-    background-color: #3498db;
+    background-color: #577d0d;
 
     color: white;
 
@@ -136,7 +136,7 @@ select:focus {
 
     outline: none;
 
-    border-color: #27ae60;
+    border-color: #577d0d;
 
 }
 
@@ -194,7 +194,7 @@ button {
 
     cursor: pointer;
 
-    background: #3498db;
+    background: #577d0d;
 
     color:white;
 
@@ -216,7 +216,7 @@ button:hover {
 
 .submit-btn {
 
-    background:#27ae60;
+    background:#577d0d;
 
     font-size:18px;
 

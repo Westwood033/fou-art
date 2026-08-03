@@ -3,8 +3,11 @@ import logo from "./../images/foufou.jpg";
 
 function Validate({ message, score, questions = [], bonus = {} }) {
 
+    const today = new Date();
+
   return (
     <div className="container-validate">
+
       <div className="card">
 
         <img className="logo" src={logo} alt="logo" />
@@ -46,16 +49,25 @@ function Validate({ message, score, questions = [], bonus = {} }) {
           <h3>Informations complémentaires</h3>
 
           <div className="info-card">
+
+            <p>
+              <strong>Numéro de projet</strong> {bonus.numProject}
+            </p>
+
+            <p>
+              <strong>Date de reception</strong> {today.toLocaleDateString()}
+            </p>
+
             <p>
               <strong>Porteur du projet :</strong> {bonus.nom}
             </p>
 
             <p>
-              <strong>Probabilité de réussite :</strong> {bonus.probabilite}
+              <strong>Commentaire :</strong> {bonus.probabilite}
             </p>
 
             <p>
-              <strong>Avis de l'accompagnateur :</strong> {bonus.avis}
+              <strong>Avis de l'accompagnateur :</strong> {score < 40 ? "A revoir" : score > 70 ? "Ok" : bonus.avis}
             </p>
           </div>
 
@@ -88,6 +100,9 @@ function Validate({ message, score, questions = [], bonus = {} }) {
 
           </section>
         )}
+        <button onClick={() => window.print()}>
+        Télécharger en PDF
+        </button>
 
       </div>
     </div>

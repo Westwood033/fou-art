@@ -20,7 +20,7 @@ function App() {
     { id: 12, title: "Assurances et autorisations" },
     { id: 13, title: "Plan B prévu" },
     { id: 14, title: "Gestion des ressources du site" },
-    { id: 15, title: "Suivi commercial prévu" },
+    { id: 15, title: "Suivi de fichier" },
     { id: 16, title: "Motivation du porteur de projet" },
     { id: 17, title: "Potentiel d'attractivité" },
     { id: 18, title: "Faisabilité logistique" },

@@ -7,6 +7,7 @@ function Score({message, score, priorite, onSubmit }) {
     const [probabilite, setProbabilite] = useState("");
     const [avis, setAvis] = useState("");
     const [nom, setNom] = useState("");
+    const [numProject, setNumProject] = useState("");
     const [newPriority, setNewPriority] = useState([]);
 
     const addPriority = () => {
@@ -37,6 +38,7 @@ function Score({message, score, priorite, onSubmit }) {
 
     const handleSubmit = () => {
         onSubmit({
+            numProject,
             nom,
             probabilite,
             avis,
@@ -59,6 +61,17 @@ function Score({message, score, priorite, onSubmit }) {
 
             <div className="title-container">
                 <div className="score-title">
+                    Numéro de projet
+                </div>
+
+                <input
+                    value={numProject}
+                    onChange={(e) => setNumProject(e.target.value)}
+                />
+            </div>
+
+            <div className="title-container">
+                <div className="score-title">
                     Nom de l'accompagnant
                 </div>
 
@@ -71,7 +84,7 @@ function Score({message, score, priorite, onSubmit }) {
 
             <div className="title-container">
                 <div className="score-title">
-                    Estimation de la probabilité de réussite
+                    Commentaire
                 </div>
 
                 <textarea
@@ -80,36 +93,41 @@ function Score({message, score, priorite, onSubmit }) {
                 />
             </div>
 
+            {score < 90 && score > 40 && 
+                (
+                    <>
+                        <div className="title-container">
+                            <div className="score-title">
+                                Avis de l'accompagnateur
+                            </div>
 
-            <div className="title-container">
-                <div className="score-title">
-                    Avis de l'accompagnateur
-                </div>
-
-                <select
-                    value={avis}
-                    onChange={(e) => setAvis(e.target.value)}
-                >
-                    <option value="">
-                        Sélectionner un avis
-                    </option>
-                    <option value="Validation sans réserve">
-                        Validation sans réserve
-                    </option>
-                    <option value="Validation sous conditions">
-                        Validation sous conditions
-                    </option>
-                    <option value="Report conseillé">
-                        Report conseillé
-                    </option>
-                    <option value="Refonte du projet">
-                        Refonte du projet
-                    </option>
-                    <option value="Refus de l'accompagnement">
-                        Refus de l'accompagnement
-                    </option>
-                </select>
-            </div>
+                            <select
+                                value={avis}
+                                onChange={(e) => setAvis(e.target.value)}
+                            >
+                                <option value="">
+                                    Sélectionner un avis
+                                </option>
+                                <option value="Validation sans réserve">
+                                    Validation sans réserve
+                                </option>
+                                <option value="Validation sous conditions">
+                                    Validation sous conditions
+                                </option>
+                                <option value="Report conseillé">
+                                    Report conseillé
+                                </option>
+                                <option value="Refonte du projet">
+                                    Refonte du projet
+                                </option>
+                                <option value="Refus de l'accompagnement">
+                                    Refus de l'accompagnement
+                                </option>
+                            </select>
+                        </div>
+                    </>
+                )
+            }
 
 
             <div className="priority-section">

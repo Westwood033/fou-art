@@ -74,29 +74,20 @@
 }
 
 
+
+
 .button-list button {
-
     width: 55px;
-
     height: 55px;
 
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    border-radius: 10%;
-
-    background-color: #3498db;
-
-    color: white;
-
-    font-size: 1rem;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
 }
-
 
 .button-list button:hover {
 
