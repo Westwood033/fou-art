@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/fou-art/static/css/main.e81657b8.css",
-    "main.js": "/fou-art/static/js/main.6153f100.js",
+    "main.js": "/fou-art/static/js/main.2a854a5c.js",
     "static/js/453.ea1f650a.chunk.js": "/fou-art/static/js/453.ea1f650a.chunk.js",
     "static/media/foufou.jpg": "/fou-art/static/media/foufou.8594b3aff349be9abd01.jpg",
     "index.html": "/fou-art/index.html",
     "main.e81657b8.css.map": "/fou-art/static/css/main.e81657b8.css.map",
-    "main.6153f100.js.map": "/fou-art/static/js/main.6153f100.js.map",
+    "main.2a854a5c.js.map": "/fou-art/static/js/main.2a854a5c.js.map",
     "453.ea1f650a.chunk.js.map": "/fou-art/static/js/453.ea1f650a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e81657b8.css",
-    "static/js/main.6153f100.js"
+    "static/js/main.2a854a5c.js"
   ]
 }
