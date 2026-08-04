@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: #f4f6fb;
+}
+
+.list-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.list-title {
+  margin-bottom: 30px;
+  color: #577d0d;
+  text-align: center;
+}
+
+.dossier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dossier-card {
+  background: #577d0d;
+  border-radius: 14px;
+  padding: 22px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+
+  transition: .25s;
+  cursor: pointer;
+}
+
+.dossier-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.12);
+}
+
+.dossier-info h2 {
+  margin: 0 0 15px;
+  color: white;
+  font-size: 22px;
+}
+
+.dossier-info p {
+  margin: 8px 0;
+  color: white;
+  font-size: 16px;
+}
+
+.dossier-info strong {
+  color: white;;
+}

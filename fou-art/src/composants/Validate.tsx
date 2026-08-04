@@ -1,9 +1,69 @@
 import "./../style/Validate.css";
 import logo from "./../images/foufou.jpg";
+import { supabase } from "./../lib/supabase"
 
-function Validate({ message, score, questions = [], bonus = {} }) {
+function Validate({ message, score, questions = [], bonus = {} , onSave}) {
+    
 
     const today = new Date();
+
+    async function handleSave() {
+
+    const { data: dossier, error: dossierError } = await supabase
+  .from("dossier")
+  .insert([
+    {
+      score: score,
+      numProject: bonus.numProject,
+      comment: bonus.probabilite,
+      avis: bonus.avis,
+      owner: bonus.nom
+    }
+  ])
+  .select()
+  .single();
+
+if (dossierError) {
+  console.error(dossierError);
+  return;
+}
+
+
+const criterias = []
+
+questions.map((item) => (
+    criterias.push({
+        title: item.question?.title,
+        score: item.answer,
+        priority: item.answer < 3,
+        dossier_id: dossier.id
+    })
+));
+
+bonus.priorite.map((item, index) => {
+    if( item.question?.title === undefined){
+       criterias.push({
+            title: item.value,
+            score: null,
+            priority: true,
+            dossier_id: dossier.id
+        })
+    }
+    });
+
+// Création des critères liés au dossier
+const { data: criteria, error: criteriaError } = await supabase
+  .from("criteria")
+  .insert(criterias);
+
+if (criteriaError) {
+  console.error(criteriaError);
+  return;
+}
+
+onSave()
+
+}
 
   return (
     <div className="container-validate">
@@ -100,6 +160,10 @@ function Validate({ message, score, questions = [], bonus = {} }) {
 
           </section>
         )}
+
+        <button onClick={() => handleSave()}>
+        Enregistrer
+        </button>
         <button onClick={() => window.print()}>
         Télécharger en PDF
         </button>

@@ -313,3 +313,7 @@ button:hover {
     }
 
 }
+
+.delete-button{
+        background-color: red;
+    }

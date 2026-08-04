@@ -20,3 +20,13 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
+.cancel-button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.delete-button{
+        background-color: red;
+    }

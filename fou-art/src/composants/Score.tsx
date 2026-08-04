@@ -166,7 +166,7 @@ function Score({message, score, priorite, onSubmit }) {
                             }
                         />
 
-                        <button onClick={() => removePriority(p.id)}>
+                        <button className="delete-button" onClick={() => removePriority(p.id)}>
                             Supprimer
                         </button>
                     </div>
@@ -174,7 +174,7 @@ function Score({message, score, priorite, onSubmit }) {
             }
 
 
-            <button onClick={handleSubmit}>
+            <button onClick={() => handleSubmit()}>
                 Valider
             </button>
 
