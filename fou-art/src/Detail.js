@@ -20,7 +20,7 @@ function Detail() {
   const navigate = useNavigate();
 
   const cancel = () => {
-    window.location.reload()
+    navigate("/fou-art/list");
   }
 
   const addPriority = () => {
@@ -262,7 +262,7 @@ async function save() {
   updateMessage(scoreCalculated);
 
   setEdit(false);
-  window.location.reload()
+  navigate("/fou-art/list");
 }
 
 

@@ -89,7 +89,7 @@ async function deleteDossier(dossier_id) {
   }
 
   console.log("Dossier supprimé");
-  window.location.reload()
+  navigate("/fou-art/list");
 }
 
 
