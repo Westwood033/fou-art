@@ -26,7 +26,7 @@ function Login() {
       } = await supabase.auth.getUser();
 
       if (user) {
-        navigate("/list");
+        navigate("/fou-art/list");
       } else {
         sessionStorage.removeItem("user");
       }
@@ -58,15 +58,17 @@ function Login() {
       JSON.stringify(data.user)
     );
 
-    navigate("/new");
+    navigate("/fou-art/list");
 
   }
 
  return (
   <div className="login-page">
+    <title>FOU-ART</title>
     <img className="logo" src={logo} alt="logo"/>
 
 
+<div className="card">
       <h1>Connexion</h1>
 
       <input
@@ -101,6 +103,7 @@ function Login() {
       >
         Se connecter
       </button>
+</div>
 
   </div>
 );

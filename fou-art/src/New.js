@@ -17,7 +17,7 @@ function New() {
     const session = sessionStorage.getItem("user");
 
     if (!session) {
-      navigate("/");
+      navigate("/fou-art/");
       return;
     }
 
@@ -27,7 +27,7 @@ function New() {
 
     if (!user) {
       sessionStorage.removeItem("user");
-      navigate("/");
+      navigate("/fou-art/");
       return;
     }
   }
@@ -68,7 +68,7 @@ function New() {
   const [questionToScore, setQuestionToScore] = useState({});
 
    async function cancel() {
-  navigate('/list');
+  navigate('/fou-art/list');
 }
 
   const goToPrev = () => {
@@ -86,7 +86,7 @@ function New() {
 
   async function handleSave() {
 
-    navigate('/list');
+    navigate('/fou-art/list');
   };
 
   const handleAnswer = (answer: number | string) => {
@@ -139,7 +139,7 @@ function New() {
     } else if (score >= 60) {
       setMessage("Projet réalisable mais nécessitant un accompagnement renforcé. Ainsi que l'avis accompagnateur");
     } else if (score >= 40) {
-      setMessage("Projet insuffisamment préparé. Des actions correctuves sont indispensables.");
+      setMessage("Projet insuffisamment préparé. Des actions correctives sont indispensables.");
     } else if (score >= 0) {
       setMessage("Projet non viable dans son état actuel. Une reffonte est recommandée avec toute mise en oeuvre.");
     }
@@ -158,6 +158,7 @@ function New() {
 
   return (
     <div>
+      <title>FOU-ART</title>
       {showValidate ? (
         <Validate
           message={message}

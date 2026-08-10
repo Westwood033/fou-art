@@ -217,6 +217,17 @@ h3 {
 
 }
 
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.add-priority {
+    margin-top: 15px;
+}
+
 
 .info-card strong {
 

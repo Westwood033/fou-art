@@ -1,59 +1,124 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-
-  background: #f4f6fb;
-}
-
 .list-page {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 20px;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: #f5f7fb;
 }
 
 .list-title {
+  text-align: center;
   margin-bottom: 30px;
   color: #577d0d;
-  text-align: center;
 }
 
 .dossier-list {
+  max-width: 1100px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
 .dossier-card {
-  background: #577d0d;
-  border-radius: 14px;
-  padding: 22px 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-
+  background: white;
+  border-radius: 16px;
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
   transition: .25s;
   cursor: pointer;
+  border-left: 6px solid #577d0d;
+  margin-top: 20px;
 }
 
 .dossier-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(0,0,0,.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0,0,0,.15);
 }
 
 .dossier-info h2 {
-  margin: 0 0 15px;
-  color: white;
-  font-size: 22px;
+  color: #577d0d;
 }
 
 .dossier-info p {
-  margin: 8px 0;
+  margin: 6px 0;
+  color: #555;
+}
+
+.score-badge {
+  display: inline-block;
+  background: #577d0d;
   color: white;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.open-button,
+.delete-button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.open-button {
+  background: #577d0d;
+  color: white;
+}
+
+.open-button:hover {
+  background: #46650b;
+}
+
+.delete-button {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #c0392b;
+}
+
+.new-button {
+  width: fit-content;
+  margin: 0 auto 25px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #577d0d;
+  color: white;
+  cursor: pointer;
   font-size: 16px;
 }
 
-.dossier-info strong {
-  color: white;;
+.new-button:hover {
+  background: #46650b;
+}
+
+@media (max-width: 700px) {
+  .dossier-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .open-button,
+  .delete-button {
+    width: 100%;
+  }
 }

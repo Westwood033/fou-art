@@ -12,11 +12,11 @@ function List() {
   const navigate = useNavigate();
 
   async function goToDossier(dossier_id) {
-  navigate(`/show/${dossier_id}`);
+  navigate(`/fou-art/show/${dossier_id}`);
 }
 
  async function goToNew() {
-  navigate('/new');
+  navigate('/fou-art/new');
 }
 
   async function getDossier(dossier_id) {
@@ -42,7 +42,7 @@ function List() {
     const session = sessionStorage.getItem("user");
 
     if (!session) {
-      navigate("/");
+      navigate("/fou-art/");
       return;
     }
 
@@ -52,7 +52,7 @@ function List() {
 
     if (!user) {
       sessionStorage.removeItem("user");
-      navigate("/");
+      navigate("/fou-art/");
       return;
     }
 
@@ -77,49 +77,69 @@ function List() {
   setDossier(data);
 }
 
+async function deleteDossier(dossier_id) {
+  const { error } = await supabase
+    .from("dossier")
+    .delete()
+    .eq("id", dossier_id);
+
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  console.log("Dossier supprimé");
+  window.location.reload()
+}
+
 
 
 
   return (
   <div className="list-page">
-
+    <title>FOU-ART</title>
     <h1 className="list-title">
       Liste des dossiers
     </h1>
 
-    <div className="dossier-list">
-        <button onClick={() => goToNew()}>Créer un dossier</button>
-      {dossier.length > 0 ? (
-        <>
+    <button className="new-button" onClick={() => goToNew()}>
+  Créer un projet
+</button>
 
-        {dossier.map((d) => (
-          <div className="dossier-card" key={d.id} onClick={() => goToDossier(d.id)}>
+{dossier.map((d) => (
+  <div className="dossier-card" key={d.id}
+  onClick={() => goToDossier(d.id)}>
+    <div
+      className="dossier-info"
+    >
 
-            <div className="dossier-info">
-              <h2>{d.numProject}</h2>
+      <div className="score-badge">
+        Score : {d.score}/100
+      </div>
 
-              <p>
-                <strong>Score :</strong> {d.score}
-              </p>
+      <p><strong>Numéro de projet :</strong> {d.numProject}</p>
 
-              <p>
-                <strong>Accompagnateur :</strong> {d.owner}
-              </p>
+      <p><strong>Accompagnateur :</strong> {d.owner}</p>
 
-              <p>
-                <strong>Date de création :</strong> {new Date(d.created_at).toLocaleDateString()}
-              </p>
-            </div>
-
-
-          </div>
-        ))}
-        
-        
-        </>
-      ) : (<><p>Aucun dossier...</p></>)
-        }
+      <p>
+        <strong>Date :</strong>{" "}
+        {new Date(d.created_at).toLocaleDateString("fr-FR")}
+      </p>
     </div>
+
+    <div className="actions">
+      <button
+        className="delete-button"
+       onClick={(e) => {
+  e.stopPropagation();
+  deleteDossier(d.id);
+}}
+      >
+        Supprimer
+      </button>
+    </div>
+  </div>
+))}
 
   </div>
 );

@@ -9,13 +9,13 @@ function App() {
   return (
     <Routes>
 
-      <Route path="/" element={<Login />} />
+      <Route path="/fou-art/" element={<Login />} />
 
-      <Route path="/list" element={<List />} />
+      <Route path="/fou-art/list" element={<List />} />
 
-      <Route path="/new" element={<New />} />
+      <Route path="/fou-art/new" element={<New />} />
 
-      <Route path="/show/:dossier_id_receive" element={<Detail />} />
+      <Route path="/fou-art/show/:dossier_id_receive" element={<Detail />} />
 
     </Routes>
   );

@@ -93,7 +93,7 @@ function Score({message, score, priorite, onSubmit }) {
                 />
             </div>
 
-            {score < 90 && score > 40 && 
+            {score < 70 && score > 40 && 
                 (
                     <>
                         <div className="title-container">
